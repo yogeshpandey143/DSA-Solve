@@ -4,12 +4,10 @@ import java.util.Arrays;
 
 public class QuickSort {
     public static void main(String[] args) {
-        int[] arr= {3,5,2,7,1,5};
-        quick(arr ,0,arr.length-1);
+        int[] arr = {3, 5, 2, 7, 1, 5};
+        quick(arr, 0, arr.length - 1);
         System.out.println(Arrays.toString(arr));
     }
-
-
     public static void quick(int[] arr , int low ,int high)
     {
         if(low<high) {
