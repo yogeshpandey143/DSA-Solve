@@ -10,5 +10,7 @@ public class Main {
         BinaryImp binaryI = new BinaryImp();
         binaryI.populate(sc);
         binaryI.display();
+
+
     }
 }
