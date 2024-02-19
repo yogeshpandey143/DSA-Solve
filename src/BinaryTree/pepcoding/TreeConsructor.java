@@ -1,5 +1,8 @@
 package BinaryTree.pepcoding;
 
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.Queue;
 import java.util.Stack;
 
 public class TreeConsructor {
@@ -32,8 +35,12 @@ static class Pair{
   {
       if(root==null)
       {
-          return;
+          System.out.println("null");
+          return ;
       }
+
+      String str="";
+      str+= " "+root.data+" ";
       System.out.println(root.data);
       display(root.left);
       display(root.right);
@@ -47,13 +54,19 @@ static class Pair{
          if(arr[i]==-1)return null;
 
          Node node  = new Node(arr[i]);
-         node.left = treeConst( arr);
-         node.right = treeConst( arr);
-
+         node.left = treeConst(arr);
+         node.right = treeConst(arr);
 
 return node;
   }
 
+
+
+  public static void  levelOrder(){
+
+      Queue<Node> queue =new ArrayDeque();
+
+  }
 
     public static void main(String[] args) {
     int arr[] ={50,32,12,-1,-1,37,30,-1,-1,-1,75,62,-1,70,-1,-1,87,-1,-1};
