@@ -71,12 +71,33 @@ public class BreadthFirstSearch
     }
 
     }
+
+    public  void dfs(ArrayList<Edge>[] graph, int curr , boolean[] visited)
+    {
+        System.out.println(curr);
+        visited[curr]= true;
+
+        for(int i =0;i<graph[curr].size();i++)
+        {
+    Edge e = graph[curr].get(i);
+    if(!visited[e.dest]) {
+        dfs(graph, e.dest, visited);
+    }
+        }
+    }
+
+
+
     public static void main(String[] args) {
         int v = 4;
         ArrayList<Edge>  graph[] = new ArrayList[v];
+
+        boolean[] visited  = new boolean[v];
         BreadthFirstSearch obj = new BreadthFirstSearch();
         obj.createGrapgh(graph,v);
-        obj.bfs(graph,v);
+//        obj.bfs(graph,v);
+
+        obj.dfs(graph,0,visited);
 
     }
 
