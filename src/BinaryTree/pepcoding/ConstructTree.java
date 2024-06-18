@@ -40,9 +40,6 @@ public void preOrder(Node root)
     preOrder(root.right);
 }
 
-
-
-
  public void leveOrder(Node root)
  {
 
