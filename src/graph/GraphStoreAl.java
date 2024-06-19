@@ -21,7 +21,7 @@ public class GraphStoreAl {
            graph[i]= new ArrayList<Edge>();
 
          }
-
+          // adding edge into the array of given index
          graph[0].add(new Edge(0,1));
          graph[0].add(new Edge(0,2));
 

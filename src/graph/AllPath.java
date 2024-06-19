@@ -10,8 +10,8 @@ public class AllPath {
 
         public Edge(int src,int dest)
         {
-            this.src=src;
-            this.dest=dest;
+            this.src=src;   // source that is current vetex
+            this.dest=dest;// destination by which current is connected
         }
     }
 
@@ -20,6 +20,8 @@ public class AllPath {
     {
         for(int  i=0;i<v;i++)
         {
+
+            // Adding ArrayList to all indexs of given array
             graph[i]= new ArrayList<graph.Edge>();
 
         }
@@ -57,20 +59,26 @@ public class AllPath {
 
     public void pathdfs(ArrayList<Edge> graph[],int curr ,boolean[] visited,String path,int target)
     {
+
+        // if we found the target then print the path
         if(curr==target)
         {
             System.out.println(path);
             return;
         }
-
+     // to iterate  the every eadge of current vertex
       for(int  i=0;i<graph[curr].size();i++)
       {
+
+          //particular edge
         Edge e = graph[curr].get(i);
         if(!visited[curr])
         {
 
             visited[curr]=true;
             pathdfs(graph,e.dest,visited,path+e.dest,target);
+
+            // backtrack visited = false because we need the vertex for another path
             visited[curr]=false;
         }
       }
