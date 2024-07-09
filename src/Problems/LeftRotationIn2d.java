@@ -24,3 +24,4 @@ public class LeftRotationIn2d {
 
 
 }
+}
