@@ -1,4 +1,4 @@
-package Dp.frogJump;
+package Dp;
 
 public class MinimumCostPath {
 
