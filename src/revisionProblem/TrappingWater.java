@@ -34,7 +34,7 @@ public class TrappingWater {
 
     public static void main(String[] args) {
         int [] arr ={1,2,3,4};
-        maxWater(arr)
+        maxWater(arr);
         System.out.println(maxWater(arr));
     }
 }
